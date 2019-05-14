@@ -6,7 +6,11 @@ docker, install from here https://docs.docker.com/install/
 docker-compose, install from here https://docs.docker.com/compose/install/
 
 ## Checking out the repository and configuring your local machine
-git clone
+download docker-compose.yml file and then execute the following command:
+docker-compose up -d
+
+(the image of docker can be found in:)
+docker pull vcutrona/tisco
 
 ## Reference
 To refer to this work, cite the following paper:
