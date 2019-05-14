@@ -1,0 +1,24 @@
+version: '2.1'
+services:
+  mongotisco:
+    image: mongo
+    container_name: mongotisco
+    volumes:
+      - "mongodata:/data/db"
+
+  tisco:
+    image: vcutrona/tisco
+    # build:
+    #       context: .
+    #       dockerfile: ./Dockerfile
+    container_name: tisco
+    ports:
+      - "8080:8080"
+    # environment:
+    #   - MONGO_DB="tisco"
+    #   - MONGO_HOST="mongotisco"
+    #   - MONGO_PORT="27017"
+volumes:
+  mongodata:
+    driver: local
+    name: tisco_mongodata
